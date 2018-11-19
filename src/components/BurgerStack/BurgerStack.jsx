@@ -3,14 +3,14 @@ import Ingredient from '../Ingredient/Ingredient'
 
 
 class BurgerStack extends Component {
-    // constructor(props) {
-    //     super(props)
-    // }
+    constructor(props) {
+        super(props)
+    }
 
     render() {
         return(
             <div>
-                {this.props.stack.ingredient.name}
+                burger stack
             </div>
         )
     }

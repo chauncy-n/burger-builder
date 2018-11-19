@@ -1,17 +1,15 @@
 import React, {Component} from 'react';
 import BurgerStack from '../BurgerStack/BurgerStack';
 
-class BurgerPane extends Component {
-    // constructor(props) {
-    //     super(props)
-    // }
-    render() {
-        var burgerstack = this.props.stack.map((stack, idx) => <BurgerStack stack={stack}/>)
-        return(
-            <div className="boxes">{this.props.stack.ingredient}</div>
-        )
-    }
-}
+const BurgerPane = (props)  => {
+   let ingredients = props.ingredients.map(ing  => <p> {ing.name}</p>)
+    return(
+            <div className="boxes">burger pane
+               {ingredients}
+            <BurgerStack />
+            </div>
+    ) 
+};
 
 export default BurgerPane;
 

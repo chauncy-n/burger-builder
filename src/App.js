@@ -30,6 +30,7 @@ class App extends Component {
     let stack = this.state.stack.slice()
     stack.push(ingredient)
     this.setState({stack: stack})
+    console.log(ingredient.name)
   }
   render() {
     return (
@@ -39,7 +40,7 @@ class App extends Component {
         addToStack={this.addToStack}        
         />
         </div>
-        <BurgerPane />
+        <BurgerPane  ingredients={this.state.stack} />
     
       </div>
     );
